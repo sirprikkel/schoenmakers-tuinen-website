@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Schoenmakers Tuinen - Ontwerp, aanleg en onderhoud van tuinen en terreinen in Megen en omgeving. Persoonlijk en op maat.">
+    <title>Ontwerp, Aanleg & Onderhoud — Schoenmakers Tuinen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://analytics.code-lieshout.nl/script.js" data-website-id="7dc2c8ad-0427-450f-8e15-c6066e3b92f6"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { primary: '#059669', 'primary-dark': '#047857', secondary: '#6B7B3C', accent: '#C67B5C', 'accent-dark': '#B5651D', cream: '#F5F0E1', sand: '#D4C4A8', forest: '#2D3B2D' }, fontFamily: { display: ['Amatic SC', 'cursive'], body: ['Cabin', 'sans-serif'] }, borderRadius: { 'organic': '12px', 'organic-lg': '24px' } } }
+        }
+    </script>
+    <style>
+        body { font-family: 'Cabin', sans-serif; }
+        .grain::after { content: ''; position: absolute; inset: 0; opacity: 0.04; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"); pointer-events: none; }
+        .hero-parallax { background-attachment: fixed; background-size: cover; background-position: center; }
+        @media (max-width: 768px) { .hero-parallax { background-attachment: scroll; } }
+    </style>
+</head>
+<body class="bg-cream text-forest">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 bg-cream/90 backdrop-blur-sm border-b border-sand/50">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between h-16 md:h-20">
+            <a href="index.html" class="font-display text-3xl md:text-4xl font-bold text-primary cursor-pointer">Schoenmakers Tuinen</a>
+            <div class="hidden md:flex items-center gap-6">
+                <a href="hovenier.html" class="text-primary font-semibold cursor-pointer">Hovenier</a>
+                <a href="boomkwekerij.html" class="text-forest/80 hover:text-primary transition-colors duration-200 cursor-pointer">Boomkwekerij</a>
+                <a href="team.html" class="text-forest/80 hover:text-primary transition-colors duration-200 cursor-pointer">Ons Team</a>
+                <a href="galerij.html" class="text-forest/80 hover:text-primary transition-colors duration-200 cursor-pointer">Galerij</a>
+                <a href="schoenmakers-meer.html" class="text-forest/80 hover:text-primary transition-colors duration-200 cursor-pointer">Schoenmakers & Meer</a>
+                <a href="contact.html" class="bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-organic font-semibold transition-colors duration-200 cursor-pointer">Contact</a>
+            </div>
+            <button id="menu-btn" class="md:hidden p-2 cursor-pointer min-w-[44px] min-h-[44px] flex items-center justify-center" aria-label="Menu"><svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-cream border-t border-sand/50 px-4 pb-4">
+            <a href="hovenier.html" class="block py-3 text-primary font-semibold cursor-pointer">Hovenier</a>
+            <a href="boomkwekerij.html" class="block py-3 text-forest/80 cursor-pointer">Boomkwekerij</a>
+            <a href="team.html" class="block py-3 text-forest/80 cursor-pointer">Ons Team</a>
+            <a href="galerij.html" class="block py-3 text-forest/80 cursor-pointer">Galerij</a>
+            <a href="schoenmakers-meer.html" class="block py-3 text-forest/80 cursor-pointer">Schoenmakers & Meer</a>
+            <a href="contact.html" class="block py-3 text-primary font-semibold cursor-pointer">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative min-h-[60vh] flex items-center hero-parallax grain" style="background-image: linear-gradient(rgba(45,59,45,0.6), rgba(45,59,45,0.5)), url('images/hovenier.jpg');">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 py-32 relative z-10">
+            <h1 class="font-display text-6xl md:text-8xl font-bold text-white mb-4">Ontwerp, Aanleg & Onderhoud</h1>
+            <p class="text-xl text-white/90 max-w-2xl">Kwaliteit staat bij ons hoog in het vaandel. Wij zien graag tevreden klanten.</p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="py-20 md:py-28">
+        <div class="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="font-display text-4xl font-bold text-forest mb-6">Ontwerp op Maat</h2>
+                    <p class="text-forest/70 leading-relaxed text-lg mb-4">Het is belangrijk dat uw tuin of terrein naar uw zin is en bij u past. Bij het ontwerpen komen wij bij u langs om uw tuin te bekijken. U kunt dan uw wensen en ideeën met ons bespreken, zodat wij deze kunnen meenemen bij het ontwerpen en kunnen koppelen aan onze eigen stijl en adviezen.</p>
+                    <p class="text-forest/70 leading-relaxed text-lg">Wij bespreken altijd het concept ontwerp met u zodat u tevreden zult zijn met het definitieve ontwerp.</p>
+                </div>
+                <div>
+                    <h2 class="font-display text-4xl font-bold text-forest mb-6">Beplanting & Aanleg</h2>
+                    <p class="text-forest/70 leading-relaxed text-lg mb-4">Het is afhankelijk van de bodemstructuur en de ligging van uw tuin of terrein welke beplanting u kunt gebruiken. Daarnaast is het natuurlijk ook belangrijk wat u graag wilt zien en beleven in de tuin en wat bij uw tuin past.</p>
+                    <p class="text-forest/70 leading-relaxed text-lg">In een beplantingsplan kunnen wij aangeven welke plantensoorten passen. Hier ligt altijd de koppeling met het totale ontwerp.</p>
+                </div>
+            </div>
+
+            <div class="mt-16 bg-white rounded-organic-lg p-8 md:p-12 shadow-[0_8px_32px_rgba(0,0,0,0.08)]">
+                <h2 class="font-display text-4xl font-bold text-forest mb-6">Tijdens de Aanleg</h2>
+                <p class="text-forest/70 leading-relaxed text-lg mb-6">Als wij vervolgens uw tuin of terrein aanleggen overleggen wij regelmatig met u over de planning en het verloop van de werkzaamheden. Bijstellen van uw wensen is altijd mogelijk!</p>
+                <a href="galerij.html" class="inline-flex items-center gap-2 text-primary hover:text-primary-dark font-semibold transition-colors duration-200 cursor-pointer text-lg">
+                    Bekijk onze fotogalerij
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-primary">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <h2 class="font-display text-5xl font-bold text-white mb-4">Vrijblijvend Advies?</h2>
+            <p class="text-white/90 text-lg mb-8">Wij komen graag bij u langs om uw wensen te bespreken.</p>
+            <a href="contact.html" class="bg-accent hover:bg-accent-dark text-white px-8 py-4 rounded-organic text-lg font-semibold transition-colors duration-200 cursor-pointer inline-block">Neem Contact Op</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-forest text-white/80 py-16">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 grid md:grid-cols-3 gap-12">
+            <div>
+                <h3 class="font-display text-3xl font-bold text-white mb-4">Schoenmakers Tuinen</h3>
+                <p>Maasdijk 13<br>5366 AA Megen</p>
+                <p class="mt-3"><a href="tel:0650264768" class="hover:text-primary transition-colors duration-200 cursor-pointer">06-50264768</a><br><a href="tel:0412486599" class="hover:text-primary transition-colors duration-200 cursor-pointer">0412-486599</a><br><a href="mailto:info@schoenmakerstuinen.nl" class="hover:text-primary transition-colors duration-200 cursor-pointer">info@schoenmakerstuinen.nl</a></p>
+            </div>
+            <div>
+                <h4 class="font-display text-2xl font-bold text-white mb-4">Diensten</h4>
+                <ul class="space-y-2"><li><a href="hovenier.html" class="hover:text-primary cursor-pointer">Ontwerp, Aanleg & Onderhoud</a></li><li><a href="boomkwekerij.html" class="hover:text-primary cursor-pointer">Boomkwekerij</a></li><li><a href="schoenmakers-meer.html" class="hover:text-primary cursor-pointer">Schoenmakers & Meer</a></li><li><a href="galerij.html" class="hover:text-primary cursor-pointer">Fotogalerij</a></li></ul>
+            </div>
+            <div>
+                <h4 class="font-display text-2xl font-bold text-white mb-4">Openingstijden</h4>
+                <ul class="space-y-1 text-sm"><li class="flex justify-between"><span>Maandag</span><span>09:30 – 18:00</span></li><li class="flex justify-between"><span>Di – Za</span><span>09:00 – 17:00</span></li><li class="flex justify-between"><span>Zondag</span><span>Gesloten</span></li></ul>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-white/50 text-sm">© 2026 Schoenmakers Tuinen</p>
+            <p class="text-white/50 text-sm">Gebouwd door <a href="https://www.code-lieshout.nl" class="text-primary hover:text-white cursor-pointer">Code Lieshout</a></p>
+        </div>
+    </footer>
+    <script>document.getElementById('menu-btn').addEventListener('click',()=>{document.getElementById('mobile-menu').classList.toggle('hidden')});</script>
+</body>
+</html>

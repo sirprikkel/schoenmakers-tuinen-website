@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fotogalerij van Schoenmakers Tuinen - Bekijk door ons ontworpen en aangelegde tuinen en terreinen.">
+    <title>Fotogalerij — Schoenmakers Tuinen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://analytics.code-lieshout.nl/script.js" data-website-id="7dc2c8ad-0427-450f-8e15-c6066e3b92f6"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#059669','primary-dark':'#047857',secondary:'#6B7B3C',accent:'#C67B5C','accent-dark':'#B5651D',cream:'#F5F0E1',sand:'#D4C4A8',forest:'#2D3B2D'},fontFamily:{display:['Amatic SC','cursive'],body:['Cabin','sans-serif']},borderRadius:{'organic':'12px','organic-lg':'24px'}}}}</script>
+    <style>
+        body{font-family:'Cabin',sans-serif}
+        .lightbox{display:none;position:fixed;inset:0;z-index:100;background:rgba(0,0,0,0.9);align-items:center;justify-content:center}
+        .lightbox.active{display:flex}
+        .lightbox img{max-width:90vw;max-height:90vh;object-fit:contain;border-radius:12px}
+        .lightbox-close{position:absolute;top:1rem;right:1rem;color:white;font-size:2rem;cursor:pointer;width:44px;height:44px;display:flex;align-items:center;justify-content:center}
+        .lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);color:white;font-size:2rem;cursor:pointer;width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.1);border-radius:50%}
+        .lightbox-prev{left:1rem}
+        .lightbox-next{right:1rem}
+    </style>
+</head>
+<body class="bg-cream text-forest">
+    <nav class="fixed top-0 w-full z-50 bg-cream/90 backdrop-blur-sm border-b border-sand/50">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between h-16 md:h-20">
+            <a href="index.html" class="font-display text-3xl md:text-4xl font-bold text-primary cursor-pointer">Schoenmakers Tuinen</a>
+            <div class="hidden md:flex items-center gap-6">
+                <a href="hovenier.html" class="text-forest/80 hover:text-primary transition-colors duration-200 cursor-pointer">Hovenier</a>
+                <a href="boomkwekerij.html" class="text-forest/80 hover:text-primary transition-colors duration-200 cursor-pointer">Boomkwekerij</a>
+                <a href="team.html" class="text-forest/80 hover:text-primary transition-colors duration-200 cursor-pointer">Ons Team</a>
+                <a href="galerij.html" class="text-primary font-semibold cursor-pointer">Galerij</a>
+                <a href="schoenmakers-meer.html" class="text-forest/80 hover:text-primary transition-colors duration-200 cursor-pointer">Schoenmakers & Meer</a>
+                <a href="contact.html" class="bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-organic font-semibold transition-colors duration-200 cursor-pointer">Contact</a>
+            </div>
+            <button id="menu-btn" class="md:hidden p-2 cursor-pointer min-w-[44px] min-h-[44px] flex items-center justify-center" aria-label="Menu"><svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-cream border-t border-sand/50 px-4 pb-4">
+            <a href="hovenier.html" class="block py-3 text-forest/80 cursor-pointer">Hovenier</a>
+            <a href="boomkwekerij.html" class="block py-3 text-forest/80 cursor-pointer">Boomkwekerij</a>
+            <a href="team.html" class="block py-3 text-forest/80 cursor-pointer">Ons Team</a>
+            <a href="galerij.html" class="block py-3 text-primary font-semibold cursor-pointer">Galerij</a>
+            <a href="schoenmakers-meer.html" class="block py-3 text-forest/80 cursor-pointer">Schoenmakers & Meer</a>
+            <a href="contact.html" class="block py-3 text-primary font-semibold cursor-pointer">Contact</a>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-20 md:py-36">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+            <h1 class="font-display text-6xl md:text-8xl font-bold text-forest text-center mb-4">Fotogalerij</h1>
+            <p class="text-center text-forest/60 text-xl mb-12 max-w-xl mx-auto">Bekijk door ons ontworpen en aangelegde tuinen en terreinen</p>
+
+            <div class="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+                <img src="images/DSC04014.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC04013.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC04012.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC04009.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC04000.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03998.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03997.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03994.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03993.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03992.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03971.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03970.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03968.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03960.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03958.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03954.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03952.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03949.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03947.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03939.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03937.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03928.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03926.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03923.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03918.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03916.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03915.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03913.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03910.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03909.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03907.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03903.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03898.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03897.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03895.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03892.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+                <img src="images/DSC03889.jpg" alt="Tuinproject" class="w-full rounded-organic shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer gallery-img" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" aria-label="Sluiten">&times;</button>
+        <button class="lightbox-nav lightbox-prev" aria-label="Vorige">&#8249;</button>
+        <img id="lightbox-img" src="" alt="Galerij foto vergroot">
+        <button class="lightbox-nav lightbox-next" aria-label="Volgende">&#8250;</button>
+    </div>
+
+    <section class="py-16 bg-primary">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <h2 class="font-display text-5xl font-bold text-white mb-4">Geïnspireerd?</h2>
+            <p class="text-white/90 text-lg mb-8">Neem contact op voor een vrijblijvend gesprek over uw droomtuin.</p>
+            <a href="contact.html" class="bg-accent hover:bg-accent-dark text-white px-8 py-4 rounded-organic text-lg font-semibold transition-colors duration-200 cursor-pointer inline-block">Neem Contact Op</a>
+        </div>
+    </section>
+
+    <footer class="bg-forest text-white/80 py-16">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 grid md:grid-cols-3 gap-12">
+            <div><h3 class="font-display text-3xl font-bold text-white mb-4">Schoenmakers Tuinen</h3><p>Maasdijk 13<br>5366 AA Megen</p><p class="mt-3"><a href="tel:0650264768" class="hover:text-primary cursor-pointer">06-50264768</a><br><a href="tel:0412486599" class="hover:text-primary cursor-pointer">0412-486599</a><br><a href="mailto:info@schoenmakerstuinen.nl" class="hover:text-primary cursor-pointer">info@schoenmakerstuinen.nl</a></p></div>
+            <div><h4 class="font-display text-2xl font-bold text-white mb-4">Diensten</h4><ul class="space-y-2"><li><a href="hovenier.html" class="hover:text-primary cursor-pointer">Ontwerp, Aanleg & Onderhoud</a></li><li><a href="boomkwekerij.html" class="hover:text-primary cursor-pointer">Boomkwekerij</a></li><li><a href="schoenmakers-meer.html" class="hover:text-primary cursor-pointer">Schoenmakers & Meer</a></li></ul></div>
+            <div><h4 class="font-display text-2xl font-bold text-white mb-4">Openingstijden</h4><ul class="space-y-1 text-sm"><li class="flex justify-between"><span>Maandag</span><span>09:30–18:00</span></li><li class="flex justify-between"><span>Di–Za</span><span>09:00–17:00</span></li><li class="flex justify-between"><span>Zondag</span><span>Gesloten</span></li></ul></div>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4"><p class="text-white/50 text-sm">© 2026 Schoenmakers Tuinen</p><p class="text-white/50 text-sm">Gebouwd door <a href="https://www.code-lieshout.nl" class="text-primary hover:text-white cursor-pointer">Code Lieshout</a></p></div>
+    </footer>
+
+    <script>
+        document.getElementById('menu-btn').addEventListener('click',()=>{document.getElementById('mobile-menu').classList.toggle('hidden')});
+        // Lightbox
+        const imgs = document.querySelectorAll('.gallery-img');
+        const lb = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lightbox-img');
+        let currentIdx = 0;
+        imgs.forEach((img, i) => {
+            img.addEventListener('click', () => { currentIdx = i; lbImg.src = img.src; lb.classList.add('active'); });
+        });
+        document.querySelector('.lightbox-close').addEventListener('click', () => lb.classList.remove('active'));
+        document.querySelector('.lightbox-prev').addEventListener('click', () => { currentIdx = (currentIdx - 1 + imgs.length) % imgs.length; lbImg.src = imgs[currentIdx].src; });
+        document.querySelector('.lightbox-next').addEventListener('click', () => { currentIdx = (currentIdx + 1) % imgs.length; lbImg.src = imgs[currentIdx].src; });
+        lb.addEventListener('click', (e) => { if (e.target === lb) lb.classList.remove('active'); });
+        document.addEventListener('keydown', (e) => {
+            if (!lb.classList.contains('active')) return;
+            if (e.key === 'Escape') lb.classList.remove('active');
+            if (e.key === 'ArrowLeft') { currentIdx = (currentIdx - 1 + imgs.length) % imgs.length; lbImg.src = imgs[currentIdx].src; }
+            if (e.key === 'ArrowRight') { currentIdx = (currentIdx + 1) % imgs.length; lbImg.src = imgs[currentIdx].src; }
+        });
+    </script>
+</body>
+</html>
